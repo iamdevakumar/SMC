@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/header_image"
+    android:padding="15dp"
+    tools:context=".Activity.Login">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/credentiallayout"
+    android:layout_marginTop="110dp"
+    android:paddingBottom="30dp"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:orientation="vertical"
+    android:background="@color/semibg">
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:src="@drawable/logo"
+    android:layout_marginBottom="15dp"/>
+<android.support.design.widget.TextInputLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/username"
+    android:paddingStart="15dp"
+    android:paddingEnd="15dp">
+    <android.support.design.widget.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/userval"
+        android:text="@string/username"
+        android:drawablePadding="10dp"
+        android:textColor="@color/white"
+        android:drawableStart="@drawable/user"/>
+</android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/password"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/passval"
+            android:textColor="@color/white"
+            android:text="@string/password"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/password"/>
+    </android.support.design.widget.TextInputLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:background="@drawable/round_button"
+        android:text="Login"/>
+</LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/credentiallayout"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Forgot Password ?"/>
+
+</RelativeLayout>
