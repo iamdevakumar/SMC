@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_staff"
+        android:icon="@drawable/ic_teacher"
+        android:title="@string/staff" />
+
+    <item
+        android:id="@+id/nav_student"
+        android:icon="@drawable/ic_student"
+        android:title="@string/student" />
+
+    <item
+        android:id="@+id/nav_parent"
+        android:icon="@drawable/ic_parent"
+        android:title="@string/parent" />
+</menu>

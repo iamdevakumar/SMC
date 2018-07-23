@@ -5,75 +5,85 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/header_image"
-    android:padding="15dp"
-    tools:context=".Activity.Login">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/credentiallayout"
-    android:layout_marginTop="110dp"
-    android:paddingBottom="30dp"
-    android:layout_marginLeft="30dp"
-    android:layout_marginRight="30dp"
-    android:orientation="vertical"
-    android:background="@color/semibg">
-<ImageView
-    android:layout_width="match_parent"
-    android:layout_height="120dp"
-    android:src="@drawable/logo"
-    android:layout_marginBottom="15dp"/>
-<android.support.design.widget.TextInputLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/username"
-    android:paddingStart="15dp"
-    android:paddingEnd="15dp">
-    <android.support.design.widget.TextInputEditText
+    android:padding="@dimen/_15sdp"
+    tools:context=".Activity.Login"
+    android:layout_gravity="center">
+    <LinearLayout
+        android:id="@+id/credentiallayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/userval"
-        android:text="@string/username"
-        android:drawablePadding="10dp"
-        android:textColor="@color/white"
-        android:drawableStart="@drawable/user"/>
-</android.support.design.widget.TextInputLayout>
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/password"
-        android:paddingStart="15dp"
-        android:paddingEnd="15dp">
-        <android.support.design.widget.TextInputEditText
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:background="@color/semibg"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_20sdp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/logo" />
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/passval"
-            android:textColor="@color/white"
-            android:text="@string/password"
-            android:drawablePadding="10dp"
-            android:drawableStart="@drawable/password"/>
-    </android.support.design.widget.TextInputLayout>
+            android:paddingEnd="@dimen/_15sdp"
+            android:paddingStart="@dimen/_15sdp">
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/log_et_uname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_10sdp"
+                android:drawableStart="@drawable/user"
+                android:fontFamily="@font/monterey"
+                android:hint="@string/username"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/log_til_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/_15sdp"
+            android:paddingStart="@dimen/_15sdp">
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/log_et_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_10sdp"
+                android:textSize="18sp"
+                android:drawableStart="@drawable/password"
+                android:fontFamily="@font/monterey"
+                android:hint="@string/password"
+                android:textColor="@color/white" />
+        </android.support.design.widget.TextInputLayout>
+        <Button
+            android:id="@+id/log_btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_70sdp"
+            android:layout_marginRight="@dimen/_70sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/round_button"
+            android:fontFamily="@font/monterey"
+            android:gravity="center"
+            android:paddingBottom="@dimen/_10sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:text="Login"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </LinearLayout>
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="80dp"
-        android:layout_marginRight="80dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:textSize="22sp"
-        android:background="@drawable/round_button"
-        android:text="Login"/>
-</LinearLayout>
-    <TextView
+        android:id="@+id/log_tv_forgot"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/credentiallayout"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:fontFamily="@font/monterey"
         android:gravity="center"
-        android:text="Forgot Password ?"/>
-
+        android:text="Forgot Password ?"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
 </RelativeLayout>

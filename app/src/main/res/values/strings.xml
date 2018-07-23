@@ -2,4 +2,18 @@
     <string name="app_name">SMC</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
+    <string name="title_activity_home">Home</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="parent">Parent</string>
+    <string name="staff">Staff</string>
+    <string name="student">Student</string>
+    <string name="upload">Upload Notes</string>
+    <string name="live">Live Stream Class</string>
+    <string name="studentresult">Get My Students Results</string>
+    <string name="schedule">Schedule List</string>
 </resources>
