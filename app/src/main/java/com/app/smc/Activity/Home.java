@@ -24,7 +24,6 @@ import com.app.smc.R;
 
 public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
     private AlertDialog alertDialog;
 
     @Override

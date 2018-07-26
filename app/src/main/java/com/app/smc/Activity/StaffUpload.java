@@ -199,7 +199,6 @@ public class StaffUpload extends AppCompatActivity{
                     JSONArray array = new JSONArray(data);
                     for(int i=0;i<array.length();i++) {
                         JSONObject jcat = array.getJSONObject(i);
-
                         std=jcat.getString("std");
                         standard.add(std);
                     }
@@ -278,7 +277,6 @@ public class StaffUpload extends AppCompatActivity{
                     JSONArray array = new JSONArray(data);
                     for(int i=0;i<array.length();i++) {
                         JSONObject jcat = array.getJSONObject(i);
-
                         sub=jcat.getString("subjectname");
                         subject.add(sub);
                     }

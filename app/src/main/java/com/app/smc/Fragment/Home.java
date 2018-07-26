@@ -49,7 +49,7 @@ public class Home extends Fragment {
         Constants.editor = Constants.pref.edit();
         role = Constants.pref.getString("role", "");
         homeList = new ArrayList<>();
-        adapter = new com.app.smc.Adapter.Home(getActivity(), homeList);
+        adapter = new com.app.smc.Adapter.Home(getActivity(), homeList,role);
         recyclerView = view.findViewById(R.id.rv_home);
         mLayoutManager = new GridLayoutManager(getActivity(), 2);
         recyclerView.setLayoutManager(mLayoutManager);

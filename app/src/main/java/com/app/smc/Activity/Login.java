@@ -35,7 +35,7 @@ public class Login extends AppCompatActivity {
     private TextInputEditText etuname, etpass;
     private Button btnlogin;
     private TextView tvforgot;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -15,6 +15,7 @@ import com.app.smc.Activity.StaffResult;
 import com.app.smc.Activity.StaffSchedule;
 import com.app.smc.Activity.StaffUpload;
 import com.app.smc.Data.HomeMenu;
+import com.app.smc.Helper.Constants;
 import com.app.smc.R;
 import com.bumptech.glide.Glide;
 
@@ -24,10 +25,11 @@ public class Home extends RecyclerView.Adapter<Home.MyViewHolder> {
 
     private Context mContext;
     private List<HomeMenu> homeList;
-
-    public Home(Context mContext, List<HomeMenu> homeList) {
+    String role;
+    public Home(Context mContext, List<HomeMenu> homeList,String role) {
         this.mContext = mContext;
         this.homeList = homeList;
+        this.role=role;
     }
 
     @NonNull
@@ -41,7 +43,7 @@ public class Home extends RecyclerView.Adapter<Home.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
-
+        final Constants constants=new Constants();
         HomeMenu menu = homeList.get(position);
 
         holder.title.setText(menu.getTitle());
@@ -49,15 +51,33 @@ public class Home extends RecyclerView.Adapter<Home.MyViewHolder> {
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                if (position == 0){
+                if (role.equalsIgnoreCase(constants.staff)) {
+                    if (position == 0) {
+                        mContext.startActivity(new Intent(mContext, StaffUpload.class));
+                    } else if (position == 1) {
+                        mContext.startActivity(new Intent(mContext, StaffResult.class));
+                    } else if (position == 2) {
+                        mContext.startActivity(new Intent(mContext, StaffSchedule.class));
+                    }
+                }
+            else if (role.equalsIgnoreCase(constants.parent)) {
+                if (position == 0) {
                     mContext.startActivity(new Intent(mContext, StaffUpload.class));
-                }else if (position == 1){
+                } else if (position == 1) {
                     mContext.startActivity(new Intent(mContext, StaffResult.class));
-                }else if (position == 2){
+                } else if (position == 2) {
                     mContext.startActivity(new Intent(mContext, StaffSchedule.class));
                 }
-            }
+            }else if (role.equalsIgnoreCase(constants.student)) {
+                    if (position == 0) {
+                        mContext.startActivity(new Intent(mContext, StaffUpload.class));
+                    } else if (position == 1) {
+                        mContext.startActivity(new Intent(mContext, StaffResult.class));
+                    } else if (position == 2) {
+                        mContext.startActivity(new Intent(mContext, StaffSchedule.class));
+                    }
+                }
+        }
         });
 
     }

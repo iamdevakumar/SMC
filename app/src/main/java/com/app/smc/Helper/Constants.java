@@ -9,6 +9,11 @@ public class Constants {
 
     public static String BASE_URL = "http://shadowws.in/smc/api/user/";
 
+    public  String parent="parent";
+    public  String student="student";
+    public  String staff="staff";
+
+
     public static String LOGIN = "login";
     public static String CLASS = "getclass";
     public static String SUBJECT = "getsubject";

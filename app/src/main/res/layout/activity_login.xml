@@ -37,6 +37,8 @@
                 android:drawableStart="@drawable/user"
                 android:fontFamily="@font/josefin"
                 android:hint="@string/username"
+                android:inputType="text"
+                android:singleLine="true"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
         </android.support.design.widget.TextInputLayout>
@@ -52,9 +54,11 @@
                 android:layout_height="wrap_content"
                 android:drawablePadding="@dimen/_10sdp"
                 android:textSize="20sp"
+                android:inputType="textPassword"
                 android:drawableStart="@drawable/pass"
                 android:fontFamily="@font/josefin"
                 android:hint="@string/password"
+                android:singleLine="true"
                 android:textColor="@color/white" />
         </android.support.design.widget.TextInputLayout>
         <Button
