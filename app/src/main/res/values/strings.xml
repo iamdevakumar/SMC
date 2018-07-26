@@ -16,4 +16,6 @@
     <string name="live">Live Stream Class</string>
     <string name="studentresult">Get My Students Results</string>
     <string name="schedule">Schedule List</string>
+    <string name="spinner">Select</string>
+
 </resources>

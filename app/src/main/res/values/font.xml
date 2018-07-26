@@ -2,5 +2,7 @@
 <resources>
     <array name="fonts" translatable="false">
         <item>@font/monterey</item>
+        <item>@font/walkway</item>
+        <item>@font/josefin</item>
     </array>
 </resources>

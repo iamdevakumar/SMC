@@ -1,14 +1,24 @@
 package com.app.smc.Helper;
 
+import android.content.SharedPreferences;
+
 public class Constants {
 
-    public static String BASE_URL = "http://smc.shadowws.in/jsons/";
-    public static String STAFF_URL = "http://smc.shadowws.in/jsons/staff/";
-    public static String PARENT_URL = "http://smc.shadowws.in/jsons/parent/";
-    public static String STUDENT_URL = "http://smc.shadowws.in/jsons/student/";
+    public static SharedPreferences pref;
+    public static SharedPreferences.Editor editor;
 
-    public static String GET_STAFF = "get_staff.php?";
-    public static String GET_STUDENT = "get_student.php?";
-    public static String GET_PARENT= "get_parent.php?";
+    public static String BASE_URL = "http://shadowws.in/smc/api/user/";
+
+    public static String LOGIN = "login";
+    public static String CLASS = "getclass";
+    public static String SUBJECT = "getsubject";
+    public static String STAFF_RESULT = "listmark";
+    public static String STAFF_RESULT_STUDENT = "listmarkstudent";
+
+    public static String id="id";
+    public static String name="name";
+    public static String mobile="mobile";
+    public static String role="role";
+
 
 }

@@ -1,10 +1,13 @@
 package com.app.smc.Activity;
 
+import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,11 +17,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
+import com.app.smc.Helper.GetSet;
 import com.app.smc.R;
 
 public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private AlertDialog alertDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,9 +108,44 @@ public class Home extends AppCompatActivity
 
         } else if (id == R.id.nav_logout) {
 
+            logoutDialog();
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void logoutDialog() {
+
+        final AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = this.getLayoutInflater();
+        final View dialogView = inflater.inflate(R.layout.logout_dialog, null);
+        dialogBuilder.setView(dialogView);
+        dialogBuilder.setCancelable(false);
+
+        Button btnyes = dialogView.findViewById(R.id.btn_yes_logout);
+        Button btnno = dialogView.findViewById(R.id.btn_no_logout);
+
+        alertDialog = dialogBuilder.create();
+
+        btnyes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                GetSet.reset();
+                finish();
+                Intent p = new Intent(Home.this, Login.class);
+                startActivity(p);
+            }
+        });
+        btnno.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                alertDialog.dismiss();
+            }
+        });
+
+        alertDialog.show();
     }
 }

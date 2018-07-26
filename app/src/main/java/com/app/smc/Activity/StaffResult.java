@@ -1,20 +1,16 @@
-package com.app.smc.Fragment;
-
+package com.app.smc.Activity;
 
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.app.smc.Adapter.StaffMenu;
 import com.app.smc.Helper.Constants;
 import com.app.smc.R;
 
@@ -33,42 +29,36 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-/**
- * A simple {@link Fragment} subclass.
- */
-public class Staff extends Fragment {
+public class StaffResult extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    private RecyclerView.LayoutManager layoutManager;
-    private StaffMenu adapter;
-    private ArrayList<HashMap<String,String>> staffMenuList=new ArrayList<HashMap<String,String>>();
-
-    public Staff() {
-        // Required empty public constructor
-    }
-
+    private com.app.smc.Adapter.StaffResult adapter;
+    private RecyclerView.LayoutManager mLayoutManager;
+    private ArrayList<HashMap<String,String>> staffresultList=new ArrayList<>();
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_staff, container, false);
-        new fetchStaff(getActivity()).execute();
-        recyclerView = view.findViewById(R.id.rv_staff);
-        layoutManager = new GridLayoutManager(getActivity(), 2);
-        recyclerView.setLayoutManager(layoutManager);
-        return view;
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        getSupportActionBar().setTitle("All Students Results");
+        setContentView(R.layout.activity_staff_result);
+
+        new fetchStaffResult(this).execute();
+
+        recyclerView = findViewById(R.id.rv_staff_result);
+        mLayoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(mLayoutManager);
+
     }
 
-    private class fetchStaff extends AsyncTask<String, Integer, String>{
+    private class fetchStaffResult extends AsyncTask<String, Integer, String>{
 
         Context context;
-        String url = Constants.STAFF_URL + Constants.GET_STAFF;
+        String url = Constants.BASE_URL + Constants.STAFF_RESULT;
         ProgressDialog progress;
-        String staffid, staffthumbnail, stafftitle;
-        HashMap<String, String> map;
+        HashMap<String,String> map;
+        String no,name,grade,id;
 
-        public fetchStaff(Context context) {
+        public fetchStaffResult(Context context) {
             this.context = context;
         }
 
@@ -89,10 +79,14 @@ public class Staff extends Fragment {
             String jsonData = null;
             Response response = null;
             OkHttpClient client = new OkHttpClient();
+            RequestBody body = new FormBody.Builder()
+                    .build();
             Request request = new Request.Builder()
                     .url(url)
+                    .post(body)
                     .build();
             Call call = client.newCall(request);
+
             try {
                 response = call.execute();
 
@@ -116,31 +110,36 @@ public class Staff extends Fragment {
             JSONObject jonj = null;
             try {
                 jonj = new JSONObject(jsonData);
-                if (jonj.getString("status").equalsIgnoreCase(
-                        "success")) {
-                    String data = jonj.getString("data");
+                if (jonj.getString("success").equalsIgnoreCase(
+                        "1")) {
+
+                    String data = jonj.getString("marks");
                     JSONArray array = new JSONArray(data);
                     for(int i=0;i<array.length();i++) {
                         JSONObject jcat = array.getJSONObject(i);
-                        map = new HashMap<String, String>();
+                        map=new HashMap<String, String>();
 
-                        staffid=jcat.getString("id");
-                        staffthumbnail=jcat.getString("thumbnail");
-                        stafftitle=jcat.getString("title");
+                        id=jcat.getString("user_id");
+                        no=jcat.getString("ic_no");
+                        name=jcat.getString("username");
+                        grade=jcat.getString("grade");
 
-                        map.put("id",staffid);
-                        map.put("thumbnail",staffthumbnail);
-                        map.put("title",stafftitle);
-                        staffMenuList.add(map);
+                        map.put("ic_no",no);
+                        map.put("username",name);
+                        map.put("grade",grade);
+                        map.put("user_id", id);
+
+                        staffresultList.add(map);
                     }
-                    adapter = new StaffMenu(getActivity(),staffMenuList);
+
+                    adapter = new com.app.smc.Adapter.StaffResult(StaffResult.this,staffresultList);
                     recyclerView.setAdapter(adapter);
 
-                }else  Toast.makeText(context,jonj.getString("message"),Toast.LENGTH_SHORT).show();
-            }catch (JSONException e) {
+                } else
+                    Toast.makeText(context, jonj.getString("message"), Toast.LENGTH_SHORT).show();
+            } catch (JSONException e) {
                 e.printStackTrace();
             }
-
         }
     }
 }

@@ -35,10 +35,10 @@
                 android:layout_height="wrap_content"
                 android:drawablePadding="@dimen/_10sdp"
                 android:drawableStart="@drawable/user"
-                android:fontFamily="@font/monterey"
+                android:fontFamily="@font/josefin"
                 android:hint="@string/username"
                 android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
             android:id="@+id/log_til_pass"
@@ -51,9 +51,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawablePadding="@dimen/_10sdp"
-                android:textSize="18sp"
-                android:drawableStart="@drawable/password"
-                android:fontFamily="@font/monterey"
+                android:textSize="20sp"
+                android:drawableStart="@drawable/pass"
+                android:fontFamily="@font/josefin"
                 android:hint="@string/password"
                 android:textColor="@color/white" />
         </android.support.design.widget.TextInputLayout>
@@ -65,7 +65,7 @@
             android:layout_marginRight="@dimen/_70sdp"
             android:layout_marginTop="@dimen/_20sdp"
             android:background="@drawable/round_button"
-            android:fontFamily="@font/monterey"
+            android:fontFamily="@font/josefin"
             android:gravity="center"
             android:paddingBottom="@dimen/_10sdp"
             android:paddingTop="@dimen/_10sdp"
@@ -80,7 +80,7 @@
         android:layout_below="@+id/credentiallayout"
         android:layout_marginTop="@dimen/_20sdp"
         android:layout_marginBottom="@dimen/_10sdp"
-        android:fontFamily="@font/monterey"
+        android:fontFamily="@font/josefin"
         android:gravity="center"
         android:text="Forgot Password ?"
         android:textAlignment="center"

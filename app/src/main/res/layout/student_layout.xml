@@ -35,7 +35,7 @@
                 android:lines="2"
                 android:layout_marginRight="@dimen/_10sdp"
                 android:layout_marginBottom="@dimen/_10sdp"
-                android:fontFamily="@font/monterey"
+                android:fontFamily="@font/josefin"
                 android:layout_marginLeft="@dimen/_15sdp"
                 android:layout_weight="1"
                 android:text="@string/upload"
