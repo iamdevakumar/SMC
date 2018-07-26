@@ -67,7 +67,7 @@
                                 android:layout_weight="0.6"
                                 android:fontFamily="@font/josefin"
                                 android:paddingLeft="@dimen/_5sdp"
-                                android:text="Karthik"
+                                android:text=""
                                 android:textColor="@color/colorPrimary"
                                 android:textSize="@dimen/_14sdp" />
                         </LinearLayout>
@@ -99,7 +99,7 @@
                                 android:fontFamily="@font/josefin"
                                 android:maxLines="2"
                                 android:paddingLeft="@dimen/_5sdp"
-                                android:text="12345"
+                                android:text=""
                                 android:textSize="@dimen/_14sdp" />
                         </LinearLayout>
                     </LinearLayout>
@@ -166,7 +166,7 @@
                             android:layout_weight="0.75"
                             android:fontFamily="@font/josefin"
                             android:paddingLeft="@dimen/_5sdp"
-                            android:text="karthik@gmail.com"
+                            android:text=""
                             android:textSize="@dimen/_14sdp" />
                     </LinearLayout>
                     <LinearLayout
@@ -196,7 +196,7 @@
                             android:layout_weight="0.75"
                             android:fontFamily="@font/josefin"
                             android:paddingLeft="@dimen/_5sdp"
-                            android:text="12345"
+                            android:text=""
                             android:textSize="@dimen/_14sdp" />
                     </LinearLayout>
                     <LinearLayout
@@ -229,7 +229,7 @@
                             android:layout_weight="0.75"
                             android:fontFamily="@font/josefin"
                             android:paddingLeft="@dimen/_5sdp"
-                            android:text="12345"
+                            android:text=""
                             android:textSize="@dimen/_14sdp" />
                     </LinearLayout>
                     <LinearLayout
@@ -261,7 +261,7 @@
                             android:layout_weight="0.75"
                             android:fontFamily="@font/josefin"
                             android:paddingLeft="@dimen/_5sdp"
-                            android:text="12345"
+                            android:text=""
                             android:textSize="@dimen/_14sdp" />
                     </LinearLayout>
                 </LinearLayout>
@@ -313,7 +313,7 @@
                             android:layout_weight="0.75"
                             android:fontFamily="@font/josefin"
                             android:paddingLeft="@dimen/_5sdp"
-                            android:text="English"
+                            android:text=""
                             android:textSize="@dimen/_14sdp" />
                     </LinearLayout>
                     <LinearLayout
@@ -344,7 +344,7 @@
                             android:fontFamily="@font/josefin"
                             android:maxLines="2"
                             android:paddingLeft="@dimen/_5sdp"
-                            android:text="100"
+                            android:text=""
                             android:textSize="@dimen/_14sdp" />
                     </LinearLayout>
                     <LinearLayout
@@ -375,7 +375,7 @@
                             android:fontFamily="@font/josefin"
                             android:maxLines="3"
                             android:paddingLeft="@dimen/_5sdp"
-                            android:text="3"
+                            android:text=""
                             android:textSize="@dimen/_14sdp" />
                     </LinearLayout>
                     <LinearLayout
@@ -406,7 +406,7 @@
                             android:fontFamily="@font/josefin"
                             android:maxLines="3"
                             android:paddingLeft="@dimen/_5sdp"
-                            android:text="12345"
+                            android:text=""
                             android:textSize="@dimen/_14sdp" />
                     </LinearLayout>
                     <LinearLayout
@@ -437,7 +437,7 @@
                             android:fontFamily="@font/josefin"
                             android:maxLines="3"
                             android:paddingLeft="@dimen/_5sdp"
-                            android:text="12345"
+                            android:text=""
                             android:textSize="@dimen/_14sdp" />
                     </LinearLayout>
                 </LinearLayout>

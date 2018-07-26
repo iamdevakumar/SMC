@@ -130,6 +130,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button
+            android:id="@+id/staff_schedule_btn"
             android:text="SCHEDULE"
             android:textColor="#FFFFFF"
             android:fontFamily="@font/josefin"

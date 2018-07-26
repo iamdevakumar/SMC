@@ -14,6 +14,7 @@ public class Constants {
     public static String SUBJECT = "getsubject";
     public static String STAFF_RESULT = "listmark";
     public static String STAFF_RESULT_STUDENT = "listmarkstudent";
+    public static String STAFF_ADD_SCHEDULE = "addschedule";
 
     public static String id="id";
     public static String name="name";
