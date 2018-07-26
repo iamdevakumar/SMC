@@ -84,11 +84,9 @@ public class StaffUpload extends AppCompatActivity{
         attach.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
                 intent.setType("*/*");
                 startActivityForResult(intent,PICKFILE);
-
             }
         });
         btnupload.setOnClickListener(new View.OnClickListener() {
